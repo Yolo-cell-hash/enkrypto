@@ -1,0 +1,130 @@
+<%- include('partials/header') %>
+
+  <!-- <div class="slide_label">
+  <input type="checkbox" id="toggle_checkbox" >
+  <label for="toggle_checkbox" class="toggle_label" ></label>
+</div> -->
+
+  <div class="container">
+    <div class="row">
+      <div class="col col-md-6">
+        <div class="login-box form1">
+          <h2 class="name_of_algo">Vignere Decipher</h2>
+          <form method="post">
+            <div class="user-box">
+              <input autocomplete="off" type="text" name="user_word" required="" />
+              <label>Input Word</label>
+            </div>
+            <div class="user-box">
+              <input autocomplete="off"   name="encryption_key" required="" />
+              <label>Key</label>
+            </div>
+            <div class="wrapbtn">
+              <button type="submit" class="buttonb">
+                <span class="curve"></span>
+                <span class="curve"></span>
+                <span class="curve"></span>
+                <span class="curve"></span>
+                <span class="material-symbols-outlined">
+                  lock_open
+                </span>
+                Decrypt
+              </button>
+            </div>
+            <div class="user-box encrypted_output_box">
+<!--               <textarea  name="encrypted_word">
+                <%- data.code_word %>
+              </textarea> -->
+              <input value="<%- data.code_word %>" autocomplete="off" name="encrypted_word" />
+              <label>Decrypted Word</label>
+            </div>
+          </form>
+        </div>
+      </div>
+
+<!-- Explaination -->
+      <div class='col'>
+
+        <div class='flip_box'>
+      
+          <div class='front col'>
+            <div class="to_center">
+            Explaination
+          </div>
+          </div>
+      
+          <div class='back col'>
+            <h4>The input word is : <span class="keyword"> <%- data.userWord%> </span> </h4>
+            <h4> The key defined by user is : <span class="keyword"> <%- data.key %></span> </h4>
+            <h4> The key obtained by cyclic substitution is : <span class="keyword"> <%- data.v_key %></span> </h4>
+            <div class="dropdown-divider sep_line"></div>
+            <h4>As we know that <span class="keyword"> <%- data.first_word %></span> shifted by <span class="keyword"> <%- data.key %></span> to the right gives us <span class="keyword"> <%- data.code_word %>.</span></h4>
+            <div class="dropdown-divider sep_line"></div>
+            <h4>This is the logic used in decrypting Vignere Cipher</h4>
+
+          
+          </div>
+
+        </div>
+        <div class='r_wrap'>
+      
+          <div class='b_round'></div>
+          <div class='s_round'>
+            <div class='s_arrow'></div>
+          </div>
+        </div>
+      
+
+      
+      </div>
+    </div>
+  </div> 
+<div class=" container containerb">
+  <div class="row">
+      <div class="col-md-6 btn_btm ">
+        <a href="/vignere-cipher" class="buttonz button_hm">
+          <span class="material-symbols-outlined">
+            lock
+            </span>
+          Encrypter</a>
+      </div>
+      <div class="col-md-6 btn_btm">
+        <a href="/" class="buttonz button_hm">
+          <span class="material-symbols-outlined">
+            home
+            </span>
+          Home</a>
+      </div>
+    </div>    
+</div>
+    
+ 
+
+<script>
+  $(document).ready(function() {
+
+var s_round = '.s_round';
+
+$(s_round).hover(function() {
+  $('.b_round').toggleClass('b_round_hover');
+  return false;
+});
+
+$(s_round).click(function() {
+  $('.flip_box').toggleClass('flipped');
+  $(this).addClass('s_round_click');
+  $('.s_arrow').toggleClass('s_arrow_rotate');
+  $('.b_round').toggleClass('b_round_back_hover');
+  return false;
+});
+
+$(s_round).on('transitionend', function() {
+  $(this).removeClass('s_round_click');
+  $(this).addClass('s_round_back');
+  return false;
+});
+});
+</script>
+
+
+<%- include('partials/footer') %>

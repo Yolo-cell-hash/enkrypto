@@ -1,0 +1,125 @@
+<%- include('partials/header') %>
+  <div class="container">
+    <div class="row">
+      <div class="col col-md-6">
+        <div class="login-box form1">
+          <h2 class="name_of_algo">Affine Decipher</h2>
+          <form method="post">
+            <div class="user-box">
+              <input autocomplete="off" type="text" name="user_word" required="" />
+              <label>Input Word</label>
+            </div>
+            <div class="user-box">
+              <input autocomplete="off" type="number" min="0" name="encryption_key_a" required="" />
+              <label>Key A</label>
+            </div>
+            <div class="user-box">
+                <input autocomplete="off" type="number" min="0" name="encryption_key_b" required="" />
+                <label>Key B</label>
+            </div>
+            <div class="wrapbtn">
+              <button type="submit" class="buttonb">
+                <span class="curve"></span>
+                <span class="curve"></span>
+                <span class="curve"></span>
+                <span class="curve"></span>
+                <span class="material-symbols-outlined">
+                  lock_open
+                </span>
+                Decrypt
+              </button>
+            </div>
+            <div class="user-box encrypted_output_box">
+              <input value="<%- data.code_word %>" autocomplete="off" type="text" name="encrypted_word" />
+<!--               <textarea  name="encrypted_word">
+                <%- data.code_word %>
+              </textarea> -->
+              <label>Decrypted Word</label>
+            </div>
+          </form>
+        </div>
+      </div>
+
+<!-- Explaination -->
+      <div class='col col-md-6'>
+
+        <div class='flip_box'>
+      
+          <div class='front col'>
+            <div class="to_center">
+            Explaination
+          </div>
+          </div>
+      
+          <div class='back col'>
+            <h4>The first word of the input is : <span class="keyword"> <%- data.first_word %> </span> </h4>
+            <h4> The A key is defined as : <span class="keyword"> <%- data.key_1 %></span> </h4>
+            <h4> The B key defined as : <span class="keyword"> <%- data.key_2 %></span> </h4>
+            <h4>This for encrypted word is : <span class="keyword"> <%- data.efirst_word %></span></h4>
+            <div class="dropdown-divider sep_line"></div>
+            <h4>Affine Cipher uses  <span class="keyword">  D ( x ) = a^-1 ( x - b ) mod 26</span> for <span class="keyword"> decryption</span>. </h4>
+            <div class="dropdown-divider sep_line"></div>
+            <h4>This is the logic used in decrypting Affine Cipher</h4>
+  
+          </div>
+
+        </div>
+        <div class='r_wrap'>  
+          <div class='b_round b_roundac'></div>
+          <div class='s_round s_roundac'>
+            <div class='s_arrow'></div>
+          </div>
+        </div>      
+      </div>
+    </div>
+  </div>
+
+<div class=" container containerb">
+  <div class="row">
+      <div class="col-md-6 btn_btm ">
+        <a href="/affine-cipher" class="buttonz button_hm">
+          <span class="material-symbols-outlined">
+            lock
+            </span>
+          Encrypter</a>
+      </div>
+      <div class="col-md-6 btn_btm">
+        <a href="/" class="buttonz button_hm">
+          <span class="material-symbols-outlined">
+            home
+            </span>
+          Home</a>
+      </div>
+    </div>    
+</div>
+    
+ 
+
+<script>
+  $(document).ready(function() {
+
+var s_round = '.s_round';
+
+$(s_round).hover(function() {
+  $('.b_round').toggleClass('b_round_hover');
+  return false;
+});
+
+$(s_round).click(function() {
+  $('.flip_box').toggleClass('flipped');
+  $(this).addClass('s_round_click');
+  $('.s_arrow').toggleClass('s_arrow_rotate');
+  $('.b_round').toggleClass('b_round_back_hover');
+  return false;
+});
+
+$(s_round).on('transitionend', function() {
+  $(this).removeClass('s_round_click');
+  $(this).addClass('s_round_back');
+  return false;
+});
+});
+</script>
+
+
+<%- include('partials/footer') %>

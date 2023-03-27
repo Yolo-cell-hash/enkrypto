@@ -1,0 +1,116 @@
+<%- include('partials/header') %>
+
+  <div class="container">
+    <div class="row">
+      <div class="col col-md-6">
+        <div class="login-box form1">
+          <h2 class="name_of_algo">Alphanumeric Decipher</h2>
+          <form method="post">
+            <div class="user-box">
+              <input autocomplete="off" name="user_word" required="" />
+              <label>Input Word</label>
+            </div>
+            <div class="wrapbtn">
+              <button type="submit" class="buttonb">
+                <span class="curve"></span>
+                <span class="curve"></span>
+                <span class="curve"></span>
+                <span class="curve"></span>
+                <span class="material-symbols-outlined">
+                  lock_open
+                </span>
+                Decrypt
+              </button>
+            </div>
+            <div class="user-box encrypted_output_box">
+              <input value="<%- data.code_word %>" autocomplete="off" type="text" name="encrypted_word" />
+<!--               <textarea  name="encrypted_word">
+                <%- data.code_word %>
+              </textarea> -->
+              <label>Decrypted Word</label>
+            </div>
+          </form>
+        </div>
+      </div>
+
+<!-- Explaination -->
+      <div class='col'>
+
+        <div class='flip_box'>
+      
+          <div class='front col'>
+            <div class="to_center">
+            Explaination
+          </div>
+          </div>
+      
+          <div class='back col'>
+            <h4>The input is : <span class="keyword"> <%- data.userIp %> </span> </h4>
+            <h4>The encrypted word is : <span class="keyword"> <%- data.code_word %></span></h4>
+            <div class="dropdown-divider sep_line"></div>
+            <h4>Here, the <span class="keyword"> numbers</span>  are substituted by their corresponding <span class="keyword"> alphabetic</span> values. </h4>
+            <div class="dropdown-divider sep_line"></div>
+            <h4>This is the logic used in decrypting Alphanumeric Cipher</h4>
+          </div>
+        </div>
+        <div class='r_wrap'>
+          <div class='b_round'></div>
+          <div class='s_round'>
+            <div class='s_arrow'></div>
+          </div>
+        </div>
+      
+
+      
+      </div>
+    </div>
+  </div> 
+<div class=" container containerb">
+  <div class="row">
+      <div class="col-md-6 btn_btm ">
+        <a href="/substitution-cipher" class="buttonz button_hm">
+          <span class="material-symbols-outlined">
+            lock
+            </span>
+          Encrypter</a>
+      </div>
+      <div class="col-md-6 btn_btm">
+        <a href="/" class="buttonz button_hm">
+          <span class="material-symbols-outlined">
+            home
+            </span>
+          Home</a>
+      </div>
+    </div>    
+</div>
+    
+ 
+
+<script>
+  $(document).ready(function() {
+
+var s_round = '.s_round';
+
+$(s_round).hover(function() {
+  $('.b_round').toggleClass('b_round_hover');
+  return false;
+});
+
+$(s_round).click(function() {
+  $('.flip_box').toggleClass('flipped');
+  $(this).addClass('s_round_click');
+  $('.s_arrow').toggleClass('s_arrow_rotate');
+  $('.b_round').toggleClass('b_round_back_hover');
+  return false;
+});
+
+$(s_round).on('transitionend', function() {
+  $(this).removeClass('s_round_click');
+  $(this).addClass('s_round_back');
+  return false;
+});
+});
+</script>
+
+
+<%- include('partials/footer') %>

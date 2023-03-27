@@ -1,0 +1,390 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="icon" href="css/images/lock.png">
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+<!-- FA CDN -->
+<script src="https://kit.fontawesome.com/8e7cdbc65b.js" crossorigin="anonymous"></script>
+
+
+
+
+<link rel="stylesheet" href="css/home.css">
+<title>Enkrypto</title>
+</head>
+<body>
+
+<!--     NAVBAR CODE     -->
+<section id="home">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="marg-ryt navbar-brand" href="#home">Enkrypto</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ml-auto marg-ryt">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#services">Algorithms</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link" href="#timeline">Timeline</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#footer">Contact</a>
+            </li>
+          </ul>
+<!--           <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+          </form> -->
+        </div>
+      </nav>
+</section>
+
+
+<!-- CONTAINER -->
+<div class="container center-element" >
+
+
+    <div class="headings">
+        <h1 class="top display-2">ENKRYPTO</h1>
+<!--         <h5 class="top display-5">Security being secured</h5> -->    
+    </div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- CARDS CODE-->
+
+
+<section id="services">
+<div class="container ">
+       <div class="top">
+        <h1 class="display-3 text-center">Encryption Algorithms</h1>
+      </div>
+
+      <div class="package-container">
+
+        <div class="packages pding">
+          <h1>Ceaser <br> Cipher</h1>
+          <ul class="list">
+            <li class="first">Accepts Input</li>
+            <li>Accepts Key</li>
+            <li>Ciphered Output</li>
+          </ul>
+          <a href="/ceaser-cipher" target="_blank" class="button button1">Encrypt</a>
+          <a href="ceaser-decipher" target="_blank" class="button button1">Decrypt</a>
+        </div>
+        <div class="packages pding">
+          <h1>Vignere <br> Cipher</h1>
+          <ul class="list">
+            <li class="first">Accepts Input</li>
+            <li>Accepts Key</li>
+            <li>Ciphered Output</li>
+          </ul>
+          <a href="/vignere-cipher" target="_blank" class="button button2">Encrypt</a>
+          <a href="vignere-decipher" target="_blank" class="button button2">Decrypt</a>
+        </div>
+        <div class="packages pding">
+          <h1>Alphanumeric <br>Cipher</h1>
+          <ul class="list">
+            <li class="first">Accepts Input</li>
+            <li>Accepts Key</li>
+            <li>Ciphered Output</li>
+          </ul>
+          <a href="/substitution-cipher" target="_blank" class="button button3">Encrypt</a>
+          <a href="/substitution-decipher" class="button button3" target="_blank">Decrypt</a>
+        </div>
+        <div class="packages pding">
+          <h1>Affine <br> Cipher</h1>
+          <ul class="list">
+            <li class="first">Accepts Input</li>
+            <li>Accepts 2 Keys</li>
+            <li>Ciphered Output</li>
+          </ul>
+          <a href="/affine-cipher" target="_blank" class="button button1">Encrypt</a>
+          <a href="/affine-decipher" target="_blank" class="button button1">Decrypt</a>
+        </div>
+        <div class="packages pding">
+          <h1>Keyword <br> Cipher</h1>
+          <ul class="list">
+            <li class="first">Accepts Input</li>
+            <li>Accepts Key</li>
+            <li>Ciphered Output</li>
+          </ul>
+          <a href="/keyword-cipher" target="_blank" class="button button2">Encrypt</a>
+          <a href="/keyword-decipher" target="_blank" class="button button2">Decrypt</a>
+        </div>
+        <div class="packages pding">
+          <h1>AES-256 <br> Encryption</h1>
+          <ul class="list">
+            <li class="first">Accepts Input</li>
+            <li>Accepts Key</li>
+            <li>Encoded Output</li>
+          </ul>
+          <a href="/aes256-cipher" target="_blank" class="button button3">Encrypt</a>
+          <a href="/aes256-decipher" target="_blank" class="button button3">Decrypt</a>
+        </div>
+      </div>
+    </div>
+</section>
+
+<section >
+<div class="container ">
+  <div class="top">
+    <h1 class="display-3 text-center">Hashing Algorithms</h1>
+  </div>
+      <div class="package-container">
+        <div class="packages pding">
+          <h1>HMAC-SHA1</h1>
+          <ul class="list">
+            <li class="first">Accepts Input</li>
+            <li>Hashed Output</li>
+          </ul>
+          <a href="/hmac-sha1" target="_blank" class="button button1">Encrypt</a>
+        </div>
+        <div class="packages pding">
+          <h1>SHA256</h1>
+          <ul class="list">
+            <li class="first">Accepts Input</li>
+            <li>Hashed Output</li>
+          </ul>
+          <a href="/sha-256" target="_blank" class="button button2">Encrypt</a>
+        </div>
+        <div class="packages pding">
+          <h1>MD5</h1>
+<!--           <h2 class="text1">&dollar;29.99</h2>
+          <h2 class="text2">&dollar;359.99</h2> -->
+          <ul class="list">
+            <li class="first">Accepts Input</li>
+            <li>Hashed Output</li>
+          </ul>
+          <a href="/md5" target="_blank" class="button button3">Encrypt</a>
+        </div>
+      </div>
+    </div>
+</section>
+<!-- TIMELINE -->
+
+<section id="timeline" class="timeline">
+
+  <div class="top">
+    <h1 class="display-3">Timeline</h1>
+  </div>
+
+  <ul>
+    <li>
+      <div>
+        <time>100 BC</time> Julius Ceaser invented Ceaser Cipher to maintain confidentiality in the war communication over long distances.
+      </div>
+    </li>
+    <li>
+      <div>
+        <time>1553</time> Giovan Battista Bellaso an Italian cryptographer but for centuries was attributed to the 16th-century French cryptographer Blaise de Vigenère. 
+      </div>
+    </li>
+    <li>
+      <div>
+        <time>1585</time> First published in 1585, the Substitution Cipher was considered unbreakable until 1863, and indeed was commonly called le chiffre indéchiffrable.
+      </div>
+    </li>
+    <li>
+      <div>
+        <time>1991</time> Ronald Rivest designed this MD5 algorithm in 1991 to provide the means for digital signature verification.
+      </div>
+    </li>
+    <li>
+      <div>
+        <time>1993</time>The United States National Security Agency designed the SHA-0 hashing family.
+      </div>
+    </li>
+    <li>
+      <div>
+        <time>1995</time>SHA-0 saw an upgrade to SHA-1 SHA-1 works by feeding a message as a bit string of length less than 2 64 2^{64} 264 bits, and producing a 160-bit hash value known as a message digest.
+      </div>
+    </li>
+    <li>
+      <div>
+        <time>1996</time>The definition and analysis of the HMAC construction was first published in 1996 in a paper by Mihir Bellare, Ran Canetti, and Hugo Krawczyk,and they also wrote RFC 2104 in 1997.
+      </div>
+    </li>
+    <li>
+      <div>
+        <time>2000</time> In October 2000 NIST announced that Rijndael, a program created by two Belgian cryptographers, Joan Daemen and Vincent Rijmen, had been accepted as the new standard, or the Advanced Encryption Standard (AES).
+      </div>
+    </li>
+    <li>
+      <div>
+        <time>2002</time> AES became effective as a U.S. federal government standard on May 26, 2002, after approval by the U.S. Secretary of Commerce.
+      </div>
+    </li>
+  </ul>
+</section>
+
+
+<!-- THANKS -->
+
+<!-- <section class="thanks">
+  <div class="jumbotron text-center">
+      <h1 class="display-3">Thank You!</h1>
+      <p class="lead"><strong>Please check your email</strong> for further instructions on how to complete your account setup.</p>
+      <hr>
+      <p>
+        Having trouble? <a href="#">Contact us</a>
+      </p>
+      <p class="lead">
+        <a class="btn btn-primary btn-sm" href="#" role="button">Continue to homepage</a>
+      </p>
+    </div>
+
+</section> -->
+
+
+
+
+
+
+
+
+
+
+
+<!-- FOOTER -->
+<section class="footer" id="footer">
+    <div class="footer bg-dark">
+        <div class="contain">
+        <div class="col">
+          <h1>Company</h1>
+          <ul>
+            <li>About</li>
+            <li>Mission</li>
+            <li>Services</li>
+            <li>Social</li>
+            <li>Get in touch</li>
+          </ul>
+        </div>
+        <div class="col">
+          <h1>Products</h1>
+          <ul>
+            <li>About</li>
+            <li>Mission</li>
+            <li>Services</li>
+            <li>Social</li>
+            <li>Get in touch</li>
+          </ul>
+        </div>
+        <div class="col">
+          <h1>Accounts</h1>
+          <ul>
+            <li>About</li>
+            <li>Mission</li>
+            <li>Services</li>
+            <li>Social</li>
+            <li>Get in touch</li>
+          </ul>
+        </div>
+        <div class="col">
+          <h1>Resources</h1>
+          <ul>
+            <li>Webmail</li>
+            <li>Redeem code</li>
+            <li>WHOIS lookup</li>
+            <li>Site map</li>
+            <li>Web templates</li>
+            <li>Email templates</li>
+          </ul>
+        </div>
+        <div class="col">
+          <h1>Support</h1>
+          <ul>
+            <li>Contact us</li>
+            <li>Web chat</li>
+            <li>Open ticket</li>
+          </ul>
+        </div>
+        <div class="col social">
+          <h1>Social</h1>
+          <ul>
+            <li><img src="css/images/linkedin.png" width="32" style="width: 32px;"></li>
+            <li><img src="css/images/instagram.png" width="32" style="width: 32px;"></li>
+            <li><img src="css/images/facebook.png" width="32" style="width: 32px;"></li>
+          </ul>
+        </div>
+      <div class="clearfix"></div>
+      </div>
+      </div>
+</section>
+
+
+
+
+
+<!-- JS CODE -->
+
+<script>(function () {
+  "use strict";
+
+  // define variables
+  var items = document.querySelectorAll(".timeline li");
+
+  // check if an element is in viewport
+  // http://stackoverflow.com/questions/123999/how-to-tell-if-a-dom-element-is-visible-in-the-current-viewport
+  function isElementInViewport(el) {
+    var rect = el.getBoundingClientRect();
+    return (
+      rect.top >= 0 &&
+      rect.left >= 0 &&
+      rect.bottom <=
+        (window.innerHeight || document.documentElement.clientHeight) &&
+      rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+    );
+  }
+
+  function callbackFunc() {
+    for (var i = 0; i < items.length; i++) {
+      if (isElementInViewport(items[i])) {
+        items[i].classList.add("in-view");
+      }
+    }
+  }
+
+  // listen for events
+  window.addEventListener("load", callbackFunc);
+  window.addEventListener("resize", callbackFunc);
+  window.addEventListener("scroll", callbackFunc);
+})();
+</script>
+
+
+
+
+    <script src="script.js"></script>
+  </body>
+</html>

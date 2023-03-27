@@ -1,0 +1,30 @@
+{
+  "name": "testproject",
+  "version": "1.0.0",
+  "description": "Graph plot",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Jay",
+  "license": "ISC",
+  "engines": {
+    "node": "16.15.1"
+  },
+  "dependencies": {
+    "@gykh/caesar-cipher": "^2.0.0",
+    "@haydenhigg/affine": "^1.0.0",
+    "@karlbateman/nero": "^1.1.1",
+    "aes256": "^1.1.0",
+    "body-parser": "^1.20.1",
+    "crypto-js": "^4.1.1",
+    "crypto-js-fix": "^4.0.1",
+    "ejs": "^3.1.8",
+    "express": "^4.18.2",
+    "js-ktc": "^1.0.4",
+    "md5": "^2.3.0",
+    "nodemon": "^2.0.20",
+    "simple-aes-256": "^3.0.1",
+    "zoiko": "^1.1.5"
+  }
+}
